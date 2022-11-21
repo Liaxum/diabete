@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList, SectionList } from "react-native";
+import { View, Text, StyleSheet, SectionList } from "react-native";
 
 const styles = StyleSheet.create({
     title: {
