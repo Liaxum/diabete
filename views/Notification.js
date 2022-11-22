@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
 });
 
 function Item({ item, title }) {
-    if (title === "Les rappels non-lus") {
+    if (title === "Les rappels non-lus :") {
         return (
             <View style={styles.notif}>
                 <View style={[styles.date, styles.newNotification.date]}><Text >{item.date}</Text></View>
@@ -71,13 +71,13 @@ function Item({ item, title }) {
 export default function Notification() {
     const notification = [
         {
-            title: "Les rappels non-lus",
+            title: "Les rappels non-lus :",
             data: [
                 {date: new Date().toLocaleDateString(), message: "Glycémie faible, donner du sucre à Julie"},
             ]
         },
         {
-            title: "Les rappels lus",
+            title: "Les rappels lus :",
             data: [
                 {date: "12/12/2020", message: "Glycémie faible, donner du sucre à Julie"},
             ]
