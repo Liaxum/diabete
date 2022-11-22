@@ -40,7 +40,7 @@ const styles = StyleSheet.create(({
 export default function Home({ navigation }) {
     return (
         <ScrollView>
-            <View style={{ flex: 1, alignItems: 'center' }}>
+            <View style={{ flex: 1, alignItems: 'center'}}>
                 <Image
                     style={styles.image}
                     source={require('../assets/pictureHome.webp')}

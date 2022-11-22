@@ -1,4 +1,4 @@
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -6,18 +6,17 @@ import Home from './views/Home';
 import Profile from './views/Profile';
 import Share from './views/Share';
 import Notification from './views/Notification';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
 const Tab = createBottomTabNavigator();
 
 
 export default function App() {
+    DefaultTheme.colors.background = 'white';
     return (
         <NavigationContainer>
             <Tab.Navigator screenOptions={({route}) => ({
                 tabBarIcon: ({_, color, size}) => {
-                    let iconName;
                     switch (route.name) {
                         case 'Accueil':
                             return <Icon name="home" size={size} color={color} />;
@@ -28,6 +27,9 @@ export default function App() {
                         case 'Partage':
                             return <Icon name="share-alt" size={size} color={color} />;
                     }
+                },
+                contentStyle: {
+                    backgroundColor: 'white',
                 }
             })}>
                 <Tab.Screen name="Accueil" component={Home} />
