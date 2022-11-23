@@ -53,14 +53,14 @@ const styles = StyleSheet.create({
 function Item({ item, title }) {
     if (title === "Les rappels non-lus :") {
         return (
-            <View style={styles.notif}>
+            <View key={item.date} style={styles.notif}>
                 <View style={[styles.date, styles.newNotification.date]}><Text >{item.date}</Text></View>
                 <View style={[styles.message, styles.newNotification.message]}><Text>{item.message}</Text></View>
             </View>
         );
     } else {
         return (
-            <View style={styles.notif}>
+            <View key={item.date} style={styles.notif}>
                 <View style={[styles.date, styles.oldNotification.date]}><Text >{item.date}</Text></View>
                 <View style={[styles.message, styles.oldNotification.message]}><Text>{item.message}</Text></View>
             </View>

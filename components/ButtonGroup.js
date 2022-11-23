@@ -30,7 +30,7 @@ export default function ButtonGroup({selectColor, defaultColor, selectTextColor,
   for (let i = 0; i < btns.length; i++) {
     if (i === 0) {
       displayButtons.push((
-        <TouchableOpacity style={[styles.btn, selection === btns[i] ? {backgroundColor: selectColor}: null, {borderTopLeftRadius: borderRadius, borderBottomLeftRadius: borderRadius}]} onPress={() => setSelection(btns[i])}>
+        <TouchableOpacity key={i} style={[styles.btn, selection === btns[i] ? {backgroundColor: selectColor}: null, {borderTopLeftRadius: borderRadius, borderBottomLeftRadius: borderRadius}]} onPress={() => setSelection(btns[i])}>
           <View style={{justifyContent: 'center', height: '100%'}}>
             <Text style={[styles.btnText, selection === btns[i] ? {color: selectTextColor} : null]}>{btns[i]}</Text>
           </View>
@@ -38,7 +38,7 @@ export default function ButtonGroup({selectColor, defaultColor, selectTextColor,
       ));
     } else if (i === btns.length - 1) {
       displayButtons.push((
-        <TouchableOpacity style={[styles.btn, selection === btns[i] ? {backgroundColor: selectColor}: null, {borderTopRightRadius: borderRadius, borderBottomRightRadius: borderRadius}]} onPress={() => setSelection(btns[i])}>
+        <TouchableOpacity key={i} style={[styles.btn, selection === btns[i] ? {backgroundColor: selectColor}: null, {borderTopRightRadius: borderRadius, borderBottomRightRadius: borderRadius}]} onPress={() => setSelection(btns[i])}>
           <View style={{justifyContent: 'center', height: '100%'}}>
             <Text style={[styles.btnText, selection === btns[i] ? {color: selectTextColor} : null]}>{btns[i]}</Text>
           </View>
@@ -46,7 +46,7 @@ export default function ButtonGroup({selectColor, defaultColor, selectTextColor,
       ));
     } else {
       displayButtons.push((
-        <TouchableOpacity style={[styles.btn, selection === btns[i] ? {backgroundColor: selectColor}: null]} onPress={() => setSelection(btns[i])}>
+        <TouchableOpacity key={i} style={[styles.btn, selection === btns[i] ? {backgroundColor: selectColor}: null]} onPress={() => setSelection(btns[i])}>
           <View style={{justifyContent: 'center', height: '100%'}}>
             <Text style={[styles.btnText, selection === btns[i] ? {color: selectTextColor} : null]}>{btns[i]}</Text>
           </View>

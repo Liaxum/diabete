@@ -6,6 +6,7 @@ import Home from './views/Home';
 import Profile from './views/Profile';
 import Share from './views/Share';
 import Notification from './views/Notification';
+import SharePro from './views/SharePro';
 
 
 const Tab = createBottomTabNavigator();
@@ -32,10 +33,15 @@ export default function App() {
                     backgroundColor: 'white',
                 }
             })}>
-                <Tab.Screen name="Accueil" component={Home} />
-                <Tab.Screen name="Profile" component={Profile} />
-                <Tab.Screen name="Notification" component={Notification} />
-                <Tab.Screen name="Partage" component={Share} />
+                <Tab.Group>
+                    <Tab.Screen name="Accueil" component={Home} />
+                    <Tab.Screen name="Profile" component={Profile} />
+                    <Tab.Screen name="Notification" component={Notification} />
+                    <Tab.Screen name="Partage" component={Share} />
+                </Tab.Group>
+                <Tab.Group screenOptions={{presentation: 'modal'}}>
+                    <Tab.Screen name="SharePro" component={SharePro} />
+                </Tab.Group>
             </Tab.Navigator>
         </NavigationContainer>
     )
