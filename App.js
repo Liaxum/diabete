@@ -7,7 +7,8 @@ import Profile from './views/Profile';
 import Share from './views/Share';
 import Notification from './views/Notification';
 import SharePro from './views/SharePro';
-
+import { Image } from 'react-native';
+import CustomButton from './components/CustomButton';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,7 +22,7 @@ export default function App() {
                     switch (route.name) {
                         case 'Accueil':
                             return <Icon name="home" size={size} color={color} />;
-                        case 'Profile':
+                        case 'Profil':
                             return <Icon name="user" size={size} color={color} />;
                         case 'Notification':
                             return <Icon name="bell" size={size} color={color} />;
@@ -29,13 +30,19 @@ export default function App() {
                             return <Icon name="share-alt" size={size} color={color} />;
                     }
                 },
-                contentStyle: {
-                    backgroundColor: 'white',
-                }
+                headerRight: (_) => (
+                    <CustomButton title={<Icon name="gear" size={24} color="#7D7D7D"/>} styles={{button: {
+                        marginRight: 20,
+                    }}}/>
+                ),
+                headerTitle: '',
+                headerLeft: (_) => (
+                    <Image source={require('./assets/graph.png')} style={{width: 125, height: 24, marginLeft: 20}}/>
+                )
             })}>
                 <Tab.Group>
                     <Tab.Screen name="Accueil" component={Home} />
-                    <Tab.Screen name="Profile" component={Profile} />
+                    <Tab.Screen name="Profil" component={Profile} />
                     <Tab.Screen name="Notification" component={Notification} />
                     <Tab.Screen name="Partage" component={Share} />
                 </Tab.Group>
