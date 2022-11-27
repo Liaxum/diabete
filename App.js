@@ -46,9 +46,6 @@ export default function App() {
                     <Tab.Screen name="Notification" component={Notification} />
                     <Tab.Screen name="Partage" component={Share} />
                 </Tab.Group>
-                <Tab.Group screenOptions={{presentation: 'modal'}}>
-                    <Tab.Screen name="SharePro" component={SharePro} />
-                </Tab.Group>
             </Tab.Navigator>
         </NavigationContainer>
     )
