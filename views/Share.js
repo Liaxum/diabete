@@ -10,7 +10,7 @@ const styles= StyleSheet.create({
         marginBottom: 100
     },
     btnFamily: {
-        backgroundColor: '#8FC0A9',
+        backgroundColor: '#ABD4D7',
         borderRadius: 20,
         padding: 10,
         margin: 10,
@@ -44,7 +44,7 @@ export default function Share({navigation}) {
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text style={styles.title}>Partager le profile</Text>
             <CustomButton styles={{button: styles.btnFamily, title: styles.btnText}} onPress={showToast} title="A un proche"/>
-            <CustomButton styles={{button: styles.btnPro, title: styles.btnText}} onPress={() => navigation.navigate('SharePro')} title="A un Professionel" />
+            <CustomButton styles={{button: styles.btnPro, title: styles.btnText}} onPress={() => navigation.navigate('SharePro')} title="A un professionel" />
         </View>
     );
 }

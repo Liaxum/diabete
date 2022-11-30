@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         margin: 5,
         borderWidth: 1,
-        borderColor: '#68B0AB'
+        borderColor: '#1CA1AF'
     },
     globalButtonGroup: {
         marginTop: 50,
@@ -59,7 +59,7 @@ export default function Profile({navigation}) {
                     <CustomButton styles={{button: styles.button}} title="Partager la fiche" onPress={() => navigation.navigate('Partage')}/>
                 </View>
             </View>
-            <ButtonGroup selectColor="#C8D5B9" defaultColor="#F3F3F3" selectTextColor="#18201A" defaultTextColor="#B5B5B5" borderRadius={100} globalStyles={styles.globalButtonGroup} btnStyle={styles.btnButtonGroup} btns={['Jour', 'Mois', 'Année']}/>
+            <ButtonGroup selectColor="#ABD4D7" defaultColor="#F3F3F3" selectTextColor="#18201A" defaultTextColor="#B5B5B5" borderRadius={100} globalStyles={styles.globalButtonGroup} btnStyle={styles.btnButtonGroup} btns={['Jour', 'Mois', 'Année']}/>
             <Text style={{...generalStyle.subTitle, margin: 20}}>Données pour le {new Date().toDateString()}</Text>
             <Image style={styles.imageGraph} source={require('../assets/graph.png')} />
             <View style={styles.box}>

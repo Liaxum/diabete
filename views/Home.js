@@ -14,12 +14,12 @@ const styles = StyleSheet.create(({
         padding: 10,
         borderRadius: 50,
         margin: 5,
-        backgroundColor: '#68B0AB'
+        backgroundColor: '#1CA1AF'
     },
     title: {
         fontWeight: 'bold',
         fontSize: 20,
-        color: '#68B0AB',
+        color: '#1CA1AF',
         marginBottom: 20
     },
     box: {
@@ -31,7 +31,7 @@ const styles = StyleSheet.create(({
         title: {
             fontWeight: 'bold',
             fontSize: 18,
-            color: '#8FC0A9',
+            color: '#ABD4D7',
             marginBottom: 10
         }
     }
@@ -64,7 +64,7 @@ export default function Home({ navigation }) {
                         source={require('../assets/graph.png')}
                     />
                     <View style={{alignItems: 'flex-end' }}>
-                        <CustomButton styles={{ button: styles.button, title: {color: 'white'} }} title="Voir le détail" onPress={() => navigation.navigate('Profile')} />
+                        <CustomButton styles={{ button: styles.button, title: {color: 'white'} }} title="Voir les données" onPress={() => navigation.navigate('Profile')} />
                     </View>
                 </View>
                 <CustomButton styles={{ button: styles.button, title: {color: 'white'} }} title="Partager la fiche profile de Julie" onPress={() => navigation.navigate('Partage')} />

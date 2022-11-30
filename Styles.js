@@ -4,12 +4,12 @@ const generalStyle = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: "bold",
-    color: '#68B0AB'
+    color: '#1CA1AF'
   },
   subTitle: {
     fontSize: 16,
     fontWeight: "bold",
-    color: '#8FC0A9'
+    color: '#ABD4D7'
   }
 })
 

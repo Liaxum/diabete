@@ -30,6 +30,7 @@ export default function App() {
                             return <Icon name="share-alt" size={size} color={color} />;
                     }
                 },
+                tabBarActiveTintColor: '#4A7C59',
                 headerRight: (_) => (
                     <CustomButton title={<Icon name="gear" size={24} color="#7D7D7D"/>} styles={{button: {
                         marginRight: 20,
@@ -37,7 +38,7 @@ export default function App() {
                 ),
                 headerTitle: '',
                 headerLeft: (_) => (
-                    <Image source={require('./assets/graph.png')} style={{width: 125, height: 24, marginLeft: 20}}/>
+                    <Image source={require('./assets/logo.png')} style={{width: 150, height: 40, marginLeft: 20}}/>
                 )
             })}>
                 <Tab.Group>
