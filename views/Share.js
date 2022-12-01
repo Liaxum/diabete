@@ -38,13 +38,13 @@ const styles= StyleSheet.create({
 
 export default function Share({navigation}) {
     const showToast = () => {
-        ToastAndroid.showWithGravity('Share profile to member family', ToastAndroid.LONG, ToastAndroid.CENTER)
+        ToastAndroid.showWithGravity('Share profile', ToastAndroid.SHORT, ToastAndroid.CENTER)
     }
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text style={styles.title}>Partager le profile</Text>
             <CustomButton styles={{button: styles.btnFamily, title: styles.btnText}} onPress={showToast} title="A un proche"/>
-            <CustomButton styles={{button: styles.btnPro, title: styles.btnText}} onPress={() => navigation.navigate('SharePro')} title="A un professionel" />
+            <CustomButton styles={{button: styles.btnPro, title: styles.btnText}} onPress={showToast} title="A un professionel" />
         </View>
     );
 }

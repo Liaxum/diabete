@@ -16,6 +16,14 @@ const styles = StyleSheet.create(({
         margin: 5,
         backgroundColor: '#1CA1AF'
     },
+    button1: {
+        padding: 10,
+        margin: 5,
+        backgroundColor: 'white',
+        borderWidth: 1,
+        borderRadius: 50,
+        borderColor: '#1CA1AF'
+    },
     title: {
         fontWeight: 'bold',
         fontSize: 20,
@@ -43,9 +51,9 @@ export default function Home({ navigation }) {
             <View style={{ flex: 1, alignItems: 'center'}}>
                 <Image
                     style={styles.image}
-                    source={require('../assets/pictureHome.webp')}
+                    source={require('../assets/girl.png')}
                 />
-                <Text style={styles.title}>Bonjour, Michel</Text>
+                <Text style={styles.title}>Bonjour, Michel 👋</Text>
                 <View style={styles.box}>
                     <Text style={styles.box.title}>Mes derniers rappels</Text>
                     <Text style={{ marginBottom: 10 }}>Vérifiez le taux d'insuline de Julie</Text>
@@ -64,7 +72,7 @@ export default function Home({ navigation }) {
                         source={require('../assets/graph.png')}
                     />
                     <View style={{alignItems: 'flex-end' }}>
-                        <CustomButton styles={{ button: styles.button, title: {color: 'white'} }} title="Voir les données" onPress={() => navigation.navigate('Profile')} />
+                        <CustomButton styles={{ button: styles.button1, title: {color: '#1CA1AF'} }} title="Voir les données" onPress={() => navigation.navigate('Données')} />
                     </View>
                 </View>
                 <CustomButton styles={{ button: styles.button, title: {color: 'white'} }} title="Partager la fiche profile de Julie" onPress={() => navigation.navigate('Partage')} />

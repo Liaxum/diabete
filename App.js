@@ -2,11 +2,11 @@ import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Octicons from 'react-native-vector-icons/Octicons';
 import Home from './views/Home';
 import Profile from './views/Profile';
 import Share from './views/Share';
 import Notification from './views/Notification';
-import SharePro from './views/SharePro';
 import { Image } from 'react-native';
 import CustomButton from './components/CustomButton';
 
@@ -22,8 +22,8 @@ export default function App() {
                     switch (route.name) {
                         case 'Accueil':
                             return <Icon name="home" size={size} color={color} />;
-                        case 'Profil':
-                            return <Icon name="user" size={size} color={color} />;
+                        case 'Données':
+                            return <Octicons name="graph" size={size} color={color} />;
                         case 'Notification':
                             return <Icon name="bell" size={size} color={color} />;
                         case 'Partage':
@@ -38,12 +38,12 @@ export default function App() {
                 ),
                 headerTitle: '',
                 headerLeft: (_) => (
-                    <Image source={require('./assets/logo.png')} style={{width: 150, height: 40, marginLeft: 20}}/>
+                    <Image source={require('./assets/logo.png')} style={{ marginLeft: 20}}/>
                 )
             })}>
                 <Tab.Group>
                     <Tab.Screen name="Accueil" component={Home} />
-                    <Tab.Screen name="Profil" component={Profile} />
+                    <Tab.Screen name="Données" component={Profile} />
                     <Tab.Screen name="Notification" component={Notification} />
                     <Tab.Screen name="Partage" component={Share} />
                 </Tab.Group>

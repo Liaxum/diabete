@@ -51,12 +51,12 @@ export default function Profile({navigation}) {
             <View style={{flexDirection: 'row', marginLeft: 30}}>
                 <Image 
                     style={styles.imageProfile}
-                    source={require('../assets/pictureHome.webp')} 
+                    source={require('../assets/girl.png')} 
                 />
                 <View>
                     <Text style={generalStyle.subTitle}>Julie Martin</Text>
                     <Text style={{marginBottom: 30}}>9 ans</Text>
-                    <CustomButton styles={{button: styles.button}} title="Partager la fiche" onPress={() => navigation.navigate('Partage')}/>
+                    <CustomButton styles={{button: styles.button, title: {color: '#1CA1AF'}}} title="Partager la fiche" onPress={() => navigation.navigate('Partage')}/>
                 </View>
             </View>
             <ButtonGroup selectColor="#ABD4D7" defaultColor="#F3F3F3" selectTextColor="#18201A" defaultTextColor="#B5B5B5" borderRadius={100} globalStyles={styles.globalButtonGroup} btnStyle={styles.btnButtonGroup} btns={['Jour', 'Mois', 'Année']}/>
